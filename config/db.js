@@ -13,9 +13,9 @@ const connectDB = async () => {
 
     // Set MongoDB connection options with timeouts
     const options = {
-      serverSelectionTimeoutMS: 5000, // Time out after 5 seconds when connecting to the server
-      socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
-      connectTimeoutMS: 10000, // Give up initial connection after 10 seconds
+      serverSelectionTimeoutMS: 60000, // Time out after 60 seconds when connecting to the server
+      socketTimeoutMS: 180000, // Close sockets after 180 seconds of inactivity
+      connectTimeoutMS: 100000, // Give up initial connection after 100 seconds
     };
 
     const conn = await mongoose.connect(mongo_uri, options);

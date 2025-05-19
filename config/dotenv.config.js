@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 
 const loadEnvConfigOfMongodb = () => {
-  const envFile = `.env.${process.env.NODE_ENV || "development"}`;
+  const envFile = `.env.${"" || "development"}`;
   dotenv.config({ path: envFile });
 
   if (!process.env.MONGODB_URI) {
